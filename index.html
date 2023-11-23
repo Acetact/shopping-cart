@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    
+    <div id="container">
+      <div class="container-section" id="section1">
+        <section id="products">
+          <div class="product-item">
+            <div class="image-container">
+              <img
+                src="/asset/amirali-mirhashemian-JqnuWlHmDfE-unsplash.jpg"
+                alt="Hamburger Image"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="container-section" id="section2">
+        <section id="product-details">
+          <h2>Hamburger</h2>
+          <p>
+            Enjoy delicious hamburger with all the toppings, buns, beef, chicken
+            and lots more.
+            <span id="item-counter">
+              <button onclick="updateQuantity(-1)">-</button>
+              <input type="number" value="1" min="1" id="quantity-input" />
+              <button onclick="updateQuantity(1)">+</button>
+            </span>
+          </p>
+        </section>
+      </div>
+
+      <div class="container-section" id="section3">
+        <section id="price-section">
+          <p id="product-price" class="price">
+            $<span id="total-price">5.00</span>
+          </p>
+          <button id="clear-cart" onclick="clearCart()">🗑️</button>
+          <p id="cart-message"></p>
+        </section>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
